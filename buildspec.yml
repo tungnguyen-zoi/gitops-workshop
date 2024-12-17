@@ -1,6 +1,10 @@
 version: 0.2
-
 phases:
   build:
     commands:
-      - echo "Hello from CodeBuild"
+    - echo "Hello from CodeBuild"
+    - yum install -y yum-utils
+    - yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+    - yum -y install terraform
+    - terrform init
+    - terraform apply -auto-approve
