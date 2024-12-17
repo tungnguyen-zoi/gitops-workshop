@@ -6,7 +6,7 @@ resource "aws_instance" "devops_workshop" {
   associate_public_ip_address = true
 
   tags = {
-    name  = "devops-workshop-tungnguyen"
+    Name  = "devops-workshop-tungnguyen"
     owner = "tung.nguyenthanh@zoi.tech"
   }
 }
